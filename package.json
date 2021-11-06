@@ -1,0 +1,30 @@
+{
+  "name": "odorik",
+  "version": "1.0.0",
+  "description": "API wrapper for VoIP provider Odorik",
+  "author": "ΔO - David Obdržálek <david@deltazero.cz>",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "type": "module",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "mocha lib/tests",
+    "build": "tsc -b",
+    "prepare": "npm run build"
+  },
+  "repository": "deltazero-cz/node-odorik",
+  "dependencies": {
+    "node-fetch": "^3.0.0",
+    "object-query-string": "^1.2.0"
+  },
+  "devDependencies": {
+    "@types/mocha": "^7.0.1",
+    "@types/node": "^16.11.6",
+    "dotenv": "^10.0.0",
+    "typescript": "^3.8.3"
+  },
+  "keywords": [
+    "node",
+    "odorik"
+  ]
+}
