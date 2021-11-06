@@ -3,6 +3,7 @@
 [Czech]
 
 Neoficiální Node.js SDK pro [API Voip operátora Odorik](http://www.odorik.cz/w/api).
+Využívá [node-fetch](https://www.npmjs.com/package/node-fetch).
 
 ### Instalace
 
@@ -47,6 +48,12 @@ await Odo.getActiveCalls()
 
 // zavěsit
 await Odo.hangUp(id_aktivniho_hovoru)
+
+// zavěsit vše
+await Odo.getActiveCalls()
+    .then(calls => Promise.all(
+        calls.map(call => Odo.hangUp(call.id))
+    ))
 
 // poslat SMS
 await Odo.sendSMS({
